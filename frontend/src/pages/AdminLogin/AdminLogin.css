@@ -1,0 +1,40 @@
+/* AdminLogin.css */
+
+.admin-login {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.admin-login h1 {
+  text-align: center;
+}
+
+.admin-login form {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-login input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.admin-login button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.admin-login .error-message {
+  color: red;
+  text-align: center;
+}

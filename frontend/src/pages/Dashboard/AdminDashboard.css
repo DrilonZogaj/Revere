@@ -1,0 +1,140 @@
+
+
+/* Main container for the dashboard */
+.admin-dashboard {
+  padding: 30px;
+  background-color: #f7f7f7;
+  min-height: 100vh;
+  background-color: rgb(208, 228, 227);
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative; /* Added relative positioning for correct positioning of the logout button */
+}
+
+/* Styling for the Logout button */
+.logout-btn {
+  width: 120px;
+  padding: 12px 24px;
+  background-color: #007bff; /* Blue color for logout */
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute; /* Position the button in the right corner */
+  top: 30px;
+  right: 30px;
+}
+
+.logout-btn:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Table styling */
+table {
+  width: 80%;
+  border-collapse: collapse;
+  margin-top: 60px; /* Give space for the logout button */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: white; /* White background for the table */
+}
+
+table th, table td {
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 16px;
+}
+
+table th {
+  background-color: #007bff; 
+  color: white;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+table tr:hover {
+  background-color: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Styling for Status buttons */
+.status-btn {
+  padding: 8px 16px;
+  margin: 5px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Button for "Accept" action */
+.status-btn:first-child {
+  background-color: #4caf50; /* Green for accept */
+  color: white;
+}
+
+.status-btn:first-child:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.status-btn:first-child:active {
+  transform: scale(1);
+}
+
+/* Button for "Edit" action */
+.status-btn:nth-child(2) {
+  background-color: #007bff; /* Blue for edit */
+  color: white;
+}
+
+.status-btn:nth-child(2):hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+}
+
+.status-btn:nth-child(2):active {
+  transform: scale(1);
+}
+
+/* Button for "Decline" action */
+.status-btn:last-child {
+  background-color: #f44336; /* Red for decline */
+  color: white;
+}
+
+.status-btn:last-child:hover {
+  background-color: #e53935;
+  transform: scale(1.05);
+}
+
+.status-btn:last-child:active {
+  transform: scale(1);
+}
+
+/* Container for status buttons */
+.status-btns {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Styling for the Toastify container */
+.Toastify__toast-container {
+  font-family: 'Arial', sans-serif;
+  font-size: 14px;
+}

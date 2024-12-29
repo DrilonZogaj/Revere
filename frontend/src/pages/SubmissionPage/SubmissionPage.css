@@ -1,0 +1,141 @@
+/* Main page container */
+.submission-message-page {
+  padding: 40px;
+  background-color: #2469d1;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #444;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  font-size: 1rem;
+  text-align: center;
+}
+
+.submissions-list {
+  width: 100%;
+  max-width: 1200px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.submission-item {
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 25px;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  height: 350px;  /* Fixed height for the cards */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.submission-item:hover {
+  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px);
+}
+
+.submission-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.submission-header h3 {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0056b3;
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.submission-details {
+  padding-top: 15px;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+}
+
+.submission-details p {
+  margin: 10px 0;
+  color: #777;
+}
+
+.submission-details strong {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Card background color variations for each card */
+.submission-item:nth-child(odd) {
+  background-color: #f7fafc;
+}
+
+.submission-item:nth-child(even) {
+  background-color: #e6f7ff;
+}
+
+.submission-header::after {
+  content: "";
+  display: block;
+  margin-top: 5px;
+  height: 3px;
+  width: 50px;
+  background-color: #0056b3;
+}
+
+.submission-details p:last-child {
+  margin-bottom: 0;
+}
+.add-appointment-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease;
+  width: 60%;
+  text-align: center;
+}
+
+.add-appointment-btn:hover {
+  background-color: #0056b3;
+}
+
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+
+  .submissions-list {
+    grid-template-columns: 1fr; /* Switch to single column on small screens */
+  }
+
+  .submission-item {
+    height: auto; /* Allow cards to expand naturally on smaller screens */
+  }
+}

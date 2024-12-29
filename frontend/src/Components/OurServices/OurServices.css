@@ -1,0 +1,157 @@
+
+.service-card-container {
+  display: block;
+  margin: auto;
+  width: 100%;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #ffffff;
+  
+}
+
+.service-card-container-title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #0161be;
+  margin-top: 30px;
+}
+
+.service-card-container-text {
+  color: #6fbd2f;
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 10px 20px;
+  margin: 0px 10px 30px 10px;
+}
+
+.service-card-section {
+  display: flex;
+  width: 90%;
+  flex-wrap: wrap;
+  margin: 30px 50px;
+  justify-content: center;
+  gap: 20px;
+  
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  border: 1px solid #dedede;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 350px;
+  padding: 15px;
+  margin: 10px 10px ;
+  transition: all 0.3s ease-in-out;
+}
+
+.service-card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05);
+}
+
+.service-icon {
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+}
+
+.service-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #0161be;
+  margin: 0;
+}
+
+.service-desc {
+  color: #6fbd2f;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Media Queries */
+
+
+@media (max-width: 768px) {
+  .service-card-container-title {
+    font-size: 2.5rem;
+  }
+
+  .service-card-container-text {
+    font-size: 1.125rem;
+  }
+
+  .service-card-section {
+    gap: 25px;
+  }
+
+  .service-card {
+    max-width: 300px;
+    padding: 20px;
+    margin: 0 auto 0 auto;
+  }
+
+  .service-icon {
+    width: 50px; 
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .service-title {
+    font-size: 1.25rem;
+  }
+
+  .service-desc {
+    font-size: 0.875rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .service-card-container-title {
+    font-size: 1.8rem;
+  }
+
+  .service-card-container-text {
+    font-size: 1rem;
+    margin: 0 10px 10px 10px ;
+  }
+
+  .service-card-section {
+    gap: 8px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .service-card {
+    max-width: 90%;
+    padding: 8px;
+    margin:  0 10px;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin: 10px 10px 10px 25px;
+  }
+
+  .service-title {
+    font-size: 1.125rem;
+    margin: 0 0 10px 0;
+  }
+
+  .service-desc {
+    font-size: 0.75rem;
+    width: 80%;
+    margin: 0 10px 10px 20px;
+  }
+}

@@ -1,0 +1,204 @@
+/* General Layout for the Appointment Page */
+.appointments-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+  background-color: #f8f9fa;
+  font-family: Arial, sans-serif;
+  height: 100vh; /* Full view height */
+  text-align: center;
+}
+
+.appointments-page h1 {
+  font-size: 2.25rem;
+  color: #4a90e2;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  width: 100%;
+  max-width: 600px;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+input,
+select,
+textarea,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #3578b6;
+}
+
+button:active {
+  background-color: #285f8f;
+}
+
+.Toastify__toast {
+  font-family: "Arial", sans-serif;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  max-width: 350px;
+  margin: 10px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  font-size: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.Toastify__toast--success {
+  background: linear-gradient(
+    145deg,
+    #9ffac5,
+    #2ecc71
+  ); /* Smooth gradient from light green to dark green */
+  color: white;
+}
+
+.Toastify__toast--error {
+  background: linear-gradient(
+    145deg,
+    #ffffff,
+    #e9aca5
+  ); /* Gradient from light red to dark red */
+  color: rgb(131, 7, 7);
+}
+
+.Toastify__toast--info {
+  background: linear-gradient(
+    145deg,
+    #a6d3f1,
+    #3498db
+  ); /* Blue gradient for informational messages */
+  color: white;
+}
+
+.Toastify__toast-body {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  flex-grow: 1;
+}
+
+.Toastify__toast-icon {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+/* Adding character to the toast based on role */
+.Toastify__toast--success .Toastify__toast-icon {
+  content: "✅"; /* Checkmark for success */
+}
+
+.Toastify__toast--error .Toastify__toast-icon {
+  content: "❗"; /* Exclamation for error */
+}
+
+.Toastify__toast--info .Toastify__toast-icon {
+  content: "ℹ️"; /* Info symbol for info */
+}
+
+/* Close (X) Button Styling */
+.Toastify__close-button {
+  background: none;
+  border: none;
+  color: #000000;
+  font-size: 1.25rem; /* Slightly smaller font for the X */
+  cursor: pointer;
+  width: 43px;
+  padding: 5px 5px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  margin: auto;
+}
+
+.Toastify__close-button:hover {
+  opacity: 0.8; /* Slight opacity change on hover */
+  transform: scale(1.1); /* Slight scale effect for interactivity */
+}
+
+.Toastify__close-button:focus {
+  outline: none; /* Remove focus outline for a cleaner look */
+}
+
+/* Mobile devices */
+@media (max-width: 768px) {
+  .appointments-page {
+    padding: 20px;
+  }
+
+  .appointments-page h1 {
+    font-size: 1.75rem;
+  }
+
+  form {
+    padding: 15px;
+    width: 100%;
+  }
+
+  button {
+    font-size: 1rem;
+    padding: 10px;
+  }
+}
+
+/* Tablets and smaller laptops */
+@media (max-width: 1024px) {
+  .appointments-page h1 {
+    font-size: 2rem;
+  }
+
+  form {
+    padding: 25px;
+    max-width: 90%;
+  }
+
+  button {
+    font-size: 1.1rem;
+  }
+}
+
+/* Large screens */
+@media (min-width: 1025px) {
+  .appointments-page {
+    padding: 40px;
+  }
+
+  .appointments-page h1 {
+    font-size: 2.25rem;
+  }
+
+  form {
+    padding: 30px;
+  }
+}

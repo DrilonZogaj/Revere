@@ -1,0 +1,196 @@
+/* General Layout for About Us Page */
+.about-us-page {
+    padding: 20px;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-us-page h2 {
+    text-align: center;
+    font-size: 2.5em;
+    color: #0161be;
+    margin-bottom: 20px;
+    
+}
+
+.about-us-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-us-content {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.about-us-content h3 {
+    color: #6fbd2f;
+    margin-bottom: 10px;
+}
+
+.about-us-content p {
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+.about-us-image {
+    flex: 1;
+    min-width: 300px;
+    max-width: 600px;
+}
+
+.about-us-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.our-values {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.our-values h3 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+    color: #34b333;
+}
+
+.our-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.our-values ul li {
+    margin-bottom: 10px;
+}
+
+.our-values ul li strong {
+    color: #333;
+}
+
+/* Media Queries */
+
+/* Mobile devices (portrait) - Adjust for small screens */
+@media (max-width: 480px) {
+    .about-us-page h2 {
+        font-size: 1.8em; 
+    }
+
+    .about-us-content h3 {
+        font-size: 1.5em; 
+    }
+
+    .about-us-content p {
+        font-size: 1rem;
+    }
+
+    .about-us-container {
+        padding: 10px;
+    }
+
+    .about-us-image img {
+        border-radius: 5px;
+    }
+
+    .our-values {
+        padding: 15px;
+    }
+
+    .our-values h3 {
+        font-size: 1.5em; 
+    }
+}
+
+/* Tablets and smaller laptops - Adjust layout for medium screens */
+@media (max-width: 768px) {
+    .about-us-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-us-content, .about-us-image {
+        max-width: 100%;
+    }
+
+    .about-us-page h2 {
+        font-size: 2em; 
+    }
+
+    .about-us-content h3 {
+        font-size: 1.6em; 
+    }
+
+    .our-values {
+        margin-top: 30px;
+        padding: 20px;
+    }
+
+    .our-values h3 {
+        font-size: 1.6em;
+    }
+}
+
+/* Larger tablets and small desktops - Adjust for larger medium screens */
+@media (max-width: 1024px) {
+    .about-us-page h2 {
+        font-size: 2.5em;
+    }
+
+    .about-us-container {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .about-us-content h3 {
+        font-size: 1.4em;
+        text-align: center;
+    }
+
+    .our-values h3 { 
+        font-size: 1.7em;
+    }
+}
+
+/* Large screens (desktops) - For larger screens, keep layouts spacious */
+@media (min-width: 1025px) {
+    .about-us-page {
+        padding: 30px;
+    }
+
+    .about-us-container {
+        gap: 30px;
+    }
+
+    .about-us-content h3 {
+        font-size: 1.8em;
+    }
+
+    .about-us-image img {
+        border-radius: 10px;
+    }
+
+    .our-values {
+        margin-top: 40px;
+        padding: 30px;
+    }
+
+    .our-values h3 { 
+        font-size: 1.8em;
+    }
+}
