@@ -10,7 +10,7 @@ function AdminLogin() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Submitting form', username, password); // Debugging log
+    console.log('Submitting form', username, password); // Debugging
 
     // Credentials to log in
     if (username === 'admin' && password === 'password') {

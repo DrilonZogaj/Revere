@@ -3,7 +3,7 @@ import "./Footer.css";
 import { socials } from "../../assets/assets";
 
 function Footer() {
-  // Scroll to top button function
+  // Scroll to top button
   function scrollToTop() {
     window.scrollTo({
       top: 0,
@@ -14,7 +14,6 @@ function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* About Section */}
         <div className="footer-about">
           <h3>Revère Dental Clinic</h3>
           <p>
@@ -22,8 +21,6 @@ function Footer() {
             with a focus on compassion, innovation, and excellence. Your smile is our pride!
           </p>
         </div>
-
-        {/* Quick Links */}
         <div className="footer-links">
           <h4>Quick Links</h4>
           <ul>
@@ -33,16 +30,12 @@ function Footer() {
             <li><a href="/contact-us">Contact Us</a></li>
           </ul>
         </div>
-
-        {/* Contact Section */}
         <div className="footer-contact">
           <h4>Contact Us</h4>
           <p>123 Revère Street, Springfield, USA</p>
           <p>Email: contact@reveredental.com</p>
           <p>Phone: +1 (555) 123-4567</p>
         </div>
-
-        {/* Social Media */}
         <div className="footer-social">
           <h4>Follow Us</h4>
           <div className="social-icons">
@@ -54,8 +47,6 @@ function Footer() {
           </div>
         </div>
       </div>
-
-      {/* Scroll to Top Button */}
       <button className="scroll-top-btn" onClick={scrollToTop}>
         Scroll to Top
       </button>

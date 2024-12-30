@@ -3,7 +3,7 @@ import "./Header.css";
 import { Link } from "react-router-dom";
 
 function Header(servicesRef ) {
-  // Scroll to service section function
+  // Scroll to services                      
    function scrollToServices() {
     const servicesSection = document.getElementById("services");
     if (servicesSection) {

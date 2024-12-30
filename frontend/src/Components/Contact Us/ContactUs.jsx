@@ -74,13 +74,11 @@ function ContactUs() {
 const handleSubmit = async (e) => {
   e.preventDefault();
 
-  // Check if message is empty
   if (submitForm.message.trim() === "") {
     toast.error("Please enter your message");
     return;
   }
 
-  // If no errors, submit the form to the backend
   if (Object.keys(errors).length === 0) {
     try {
       const response = await fetch("http://localhost/backend/db/submit.php", {
@@ -92,7 +90,7 @@ const handleSubmit = async (e) => {
       });
 
       const data = await response.json(); 
-     // Set success message
+     
       if (data.success) {
         setResponseMessage(data.message); 
         toast.success("Form submitted successfully!");
@@ -101,7 +99,7 @@ const handleSubmit = async (e) => {
         toast.error(data.message || "Submission failed.");
       }
 
-      // Clear the form after submission
+
       setSubmitForm({
         firstName: "",
         lastName: "",

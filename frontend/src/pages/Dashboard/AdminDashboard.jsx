@@ -6,11 +6,10 @@ import "./AdminDashboard.css";
 
 function AdminDashboard() {
   const [appointments, setAppointments] = useState([]);
-  const [updateForm, setUpdateForm] = useState(null); // State for update form
+  const [updateForm, setUpdateForm] = useState(null);
   const navigate = useNavigate();
 
   useEffect(() => {
-    // Check if the admin is authenticated
     const isAuthenticated = localStorage.getItem("adminAuthenticated");
     console.log("Authentication status:", isAuthenticated);
 
@@ -18,7 +17,7 @@ function AdminDashboard() {
       console.log("Not authenticated, redirecting...");
       navigate("/admin-login");
     } else {
-      fetchAppointments(); // Fetch appointments if authenticated
+      fetchAppointments();
     }
   }, [navigate]);
 
@@ -39,25 +38,23 @@ function AdminDashboard() {
       toast.error("Error fetching appointments.");
     }
   };
-
-  // Handle appointment deletion
   const handleDeleteAppointment = async (appointmentId) => {
     try {
       const response = await fetch(
         `http://localhost/backend/db/deleteAppointments.php`,
         {
-          method: "DELETE", // Send DELETE request
+          method: "DELETE",
           headers: {
             "Content-Type": "application/json",
           },
-          body: JSON.stringify({ appointment_id: appointmentId }), // Send appointment ID in the body
+          body: JSON.stringify({ appointment_id: appointmentId }),
         }
       );
 
       const data = await response.json();
       if (response.ok) {
         toast.success(data.message || "Appointment deleted successfully!");
-        fetchAppointments(); // Refetch appointments after deletion
+        fetchAppointments();
       } else {
         toast.error(data.message || "Failed to delete appointment.");
       }
@@ -66,10 +63,8 @@ function AdminDashboard() {
       toast.error("Failed to delete appointment.");
     }
   };
-
-  // Handle updating appointment
   const handleUpdateAppointment = (appointment) => {
-    setUpdateForm(appointment); // Set the form to the current appointment data
+    setUpdateForm(appointment);
   };
 
   const handleFormSubmit = async (event) => {
@@ -91,7 +86,7 @@ function AdminDashboard() {
       const response = await fetch(
         "http://localhost/backend/db/updateAppointments.php",
         {
-          // Updated endpoint
+        
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -107,8 +102,8 @@ function AdminDashboard() {
       const data = await response.json();
       if (response.ok) {
         toast.success(data.message || "Appointment updated successfully!");
-        setUpdateForm(null); // Close the form after successful update
-        fetchAppointments(); // Refetch appointments after update
+        setUpdateForm(null);
+        fetchAppointments();
       } else {
         toast.error(data.message || "Failed to update appointment.");
       }
@@ -118,7 +113,6 @@ function AdminDashboard() {
     }
   };
 
-  // Handle form input change
   const handleFormChange = (event) => {
     setUpdateForm({
       ...updateForm,
@@ -141,7 +135,6 @@ function AdminDashboard() {
         Logout
       </button>
 
-      {/* Update Form */}
       {updateForm && (
         <div className="update-form">
           <h2>Update Appointment</h2>
@@ -152,7 +145,7 @@ function AdminDashboard() {
                 type="number"
                 name="id"
                 value={updateForm.appointment_id}
-                disabled // Prevents editing
+                disabled
               />
             </label>
 
@@ -231,8 +224,6 @@ function AdminDashboard() {
           </form>
         </div>
       )}
-
-      {/* Appointment Table */}
       <table>
         <thead>
           <tr>
@@ -261,7 +252,7 @@ function AdminDashboard() {
               <td>
                 <button
                   className="status-btn"
-                  onClick={() => handleUpdateAppointment(appointment)} // Updated to use handleUpdateAppointment
+                  onClick={() => handleUpdateAppointment(appointment)}
                 >
                   Update
                 </button>

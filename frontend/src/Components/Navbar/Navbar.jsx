@@ -4,12 +4,12 @@ import "./Navbar.css";
 import { assets } from "../../assets/assets";
 
 
-// Track if the menu is open
+// if the menu is open
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); 
  
 
-  // Toggle menu for mobile
+  // Toggle menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
@@ -35,8 +35,6 @@ function Navbar() {
         <span className="bar"></span>
         <span className="bar"></span>
       </div>
-
-      {/* Navbar Menu */}
       <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
         <li>
           <NavLink
@@ -84,8 +82,6 @@ function Navbar() {
           </NavLink>
         </li>
       </ul>
-
-      {/* Button - "Book Now" */}
       <div className="nav-right">
         <Link to="/appointments">
           <button onClick={handleLinkClick}>Book Now</button>

@@ -39,7 +39,7 @@
   padding: 25px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
-  height: 350px;  /* Fixed height for the cards */
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -83,8 +83,6 @@
   font-weight: bold;
   color: #333;
 }
-
-/* Card background color variations for each card */
 .submission-item:nth-child(odd) {
   background-color: #f7fafc;
 }
@@ -125,17 +123,17 @@
 }
 
 
-/* Responsive design for smaller screens */
+/* Media Queries */
 @media (max-width: 768px) {
   .page-title {
     font-size: 2rem;
   }
 
   .submissions-list {
-    grid-template-columns: 1fr; /* Switch to single column on small screens */
+    grid-template-columns: 1fr;
   }
 
   .submission-item {
-    height: auto; /* Allow cards to expand naturally on smaller screens */
+    height: auto;
   }
 }

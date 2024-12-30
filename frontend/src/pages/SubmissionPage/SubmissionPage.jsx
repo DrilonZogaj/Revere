@@ -1,20 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import the useNavigate hook
+import { useNavigate } from "react-router-dom";
 import './SubmissionPage.css';
 function SubmissionMessagePage() {
   const [submissions, setSubmissions] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
 
   useEffect(() => {
-    // Fetch submissions from the backend
+    // Fetch submissions
     fetch("http://localhost/backend/db/getSubmissions.php")
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
-          setSubmissions(data.submissions); // Store the submissions in state
+          setSubmissions(data.submissions);
         } else {
           setError(data.message || "Error fetching submissions.");
         }
@@ -26,9 +26,7 @@ function SubmissionMessagePage() {
       });
   }, []);
 
-  // Function to handle redirection to the Add Appointment Page
   const handleAddAppointment = (submission) => {
-    // Pass the data from the submission as state to the Add Appointment Page
     navigate("/appointments", {
       state: {
         firstName: submission.first_name,
@@ -54,8 +52,6 @@ function SubmissionMessagePage() {
               <p><strong>Email:</strong> {submission.email}</p>
               <p><strong>Phone Number:</strong> {submission.phone_number}</p>
               <p><strong>Message:</strong> {submission.message}</p>
-
-              {/* Add Appointment Button */}
               <button
                 onClick={() => handleAddAppointment(submission)}
                 className="add-appointment-btn"

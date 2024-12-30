@@ -17,10 +17,8 @@
   gap: 20px;
   max-width: 70%;
   height: 100%;
-  /* bottom: 15%; */
   padding: 20px;
   margin: auto;
-  /* left: 6vw; */
   border-radius: 15px;
   animation: fadeIn 3s;
   padding: 10px 15px;
@@ -29,7 +27,6 @@
 .header-content h1 {
   font-weight: 500;
   color: #ffffff;
-  /* font-size: max(3.5vw, 22px); */
   font-size: 42px;
   text-shadow: 3px 3px 5px #000000;
 }

@@ -1,4 +1,4 @@
-/* General Layout for the Appointment Page */
+/*  Appointments Page */
 .appointments-page {
   display: flex;
   flex-direction: column;
@@ -7,7 +7,7 @@
   padding: 40px;
   background-color: #f8f9fa;
   font-family: Arial, sans-serif;
-  height: 100vh; /* Full view height */
+  height: 100vh;
   text-align: center;
 }
 
@@ -16,8 +16,6 @@
   color: #4a90e2;
   margin-bottom: 20px;
 }
-
-/* Form Styling */
 form {
   width: 100%;
   max-width: 600px;
@@ -83,7 +81,7 @@ button:active {
     145deg,
     #9ffac5,
     #2ecc71
-  ); /* Smooth gradient from light green to dark green */
+  );
   color: white;
 }
 
@@ -92,7 +90,7 @@ button:active {
     145deg,
     #ffffff,
     #e9aca5
-  ); /* Gradient from light red to dark red */
+  );
   color: rgb(131, 7, 7);
 }
 
@@ -101,7 +99,7 @@ button:active {
     145deg,
     #a6d3f1,
     #3498db
-  ); /* Blue gradient for informational messages */
+  );
   color: white;
 }
 
@@ -116,25 +114,22 @@ button:active {
   padding: 5px;
 }
 
-/* Adding character to the toast based on role */
 .Toastify__toast--success .Toastify__toast-icon {
-  content: "✅"; /* Checkmark for success */
+  content: "✅";
 }
 
 .Toastify__toast--error .Toastify__toast-icon {
-  content: "❗"; /* Exclamation for error */
+  content: "❗";
 }
 
 .Toastify__toast--info .Toastify__toast-icon {
-  content: "ℹ️"; /* Info symbol for info */
+  content: "i";
 }
-
-/* Close (X) Button Styling */
 .Toastify__close-button {
   background: none;
   border: none;
   color: #000000;
-  font-size: 1.25rem; /* Slightly smaller font for the X */
+  font-size: 1.25rem;
   cursor: pointer;
   width: 43px;
   padding: 5px 5px;
@@ -143,15 +138,15 @@ button:active {
 }
 
 .Toastify__close-button:hover {
-  opacity: 0.8; /* Slight opacity change on hover */
-  transform: scale(1.1); /* Slight scale effect for interactivity */
+  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 .Toastify__close-button:focus {
-  outline: none; /* Remove focus outline for a cleaner look */
+  outline: none;
 }
 
-/* Mobile devices */
+/* Media  Queries */
 @media (max-width: 768px) {
   .appointments-page {
     padding: 20px;
@@ -171,8 +166,6 @@ button:active {
     padding: 10px;
   }
 }
-
-/* Tablets and smaller laptops */
 @media (max-width: 1024px) {
   .appointments-page h1 {
     font-size: 2rem;
@@ -187,8 +180,6 @@ button:active {
     font-size: 1.1rem;
   }
 }
-
-/* Large screens */
 @media (min-width: 1025px) {
   .appointments-page {
     padding: 40px;
