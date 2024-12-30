@@ -8,12 +8,10 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 
 require_once 'config.php';
 
-// Check if the request method is POST
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieve input data
+
     $data = json_decode(file_get_contents('php://input'), true);
 
-    // Validate the input data
     if (isset($data['appointment_id'], $data['name'], $data['email'])) {
         $appointment_id = $data['appointment_id'];
         $name = $data['name'];
@@ -25,7 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $notes = $data['notes'];
 
         try {
-            // Update the appointment
             $query = "UPDATE appointments SET name = :name, email = :email, phone = :phone, date = :date, time = :time, service = :service, notes = :notes WHERE id = :appointment_id";
             $stmt = $conn->prepare($query);
             $stmt->bindParam(":name", $name);
