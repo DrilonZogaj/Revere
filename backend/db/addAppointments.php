@@ -7,7 +7,6 @@ header("Access-Control-Allow-Headers: Content-Type, Authorization");
 require_once 'config.php';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Retrieving form data
     $name = $_POST['name'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
@@ -38,18 +37,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $errors[] = "Service is required.";
     }
 
-    // If there are validation errors, send them back
+    // If there are validation errors
     if (!empty($errors)) {
         echo json_encode(["status" => "error", "message" => implode(", ", $errors)]);
         exit;
     }
-
-    // Insert into database
     $query = "INSERT INTO appointments (name, email, phone, date, time, service, notes) 
               VALUES (:Name, :Email, :Phone, :Date, :Time, :Service, :Notes)";
     $stmt = $conn->prepare($query);
 
-    // Binding parameters
     $stmt->bindParam(":Name", $name);
     $stmt->bindParam(":Email", $email);
     $stmt->bindParam(":Phone", $phone);
@@ -58,7 +54,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $stmt->bindParam(":Service", $service);
     $stmt->bindParam(":Notes", $notes);
 
-    // Checking if the insertion was successful
+    // If the insertion was successful
     if ($stmt->execute()) {
         echo json_encode(["status" => "success", "message" => "Appointment booked successfully!"]);
     } else {
