@@ -3,12 +3,13 @@
 import logo from "./logo.png";
 import bannerImg from "./banner-img.jpg";
 import aboutusImg from './clientservice.png';
-//----------------------------
+//-------------------------------------------------
 export const assets = {
   logo,
   bannerImg,
   aboutusImg,
 };
+//-------------------------------------------------
 
 //DOCTORS
 import doc1 from "./doc1.jpg";
@@ -58,7 +59,7 @@ export const doctors = [
     desc: "Focuses on cosmetic dentistry, helping patients enhance their smiles through procedures like teeth whitening and veneers, ensuring natural, stunning results.",
   },
 ];
-
+//--------------------------------------------------
 
 //SERVICES
 import restorativeIcon from './restorative-icon.png';
@@ -120,6 +121,8 @@ export const services = [
     desc: "Offers treatments to straighten teeth, improve bite function, and enhance facial aesthetics through braces, aligners, and other orthodontic tools."
   }
 ];
+//--------------------------------------------------
+
 // Testimonials
 import testimonial1 from './Sarah Johnson.png';
 import testimonial2 from './Michael Brown.png';
@@ -129,13 +132,14 @@ export const testimonials = {
   testimonial2,
   testimonial3,
 };
+//--------------------------------------------------
 
 // Social Icons
 import facebook from './facebook.png';
 import instagram from './instagram.png';
 import twitter from './twitter.png';
 import linkedin from './linkedin.png';
-
+//-------------------------------------------------
 export const socials = [
   {
     name: "Facebook",
@@ -154,3 +158,4 @@ export const socials = [
     icon: linkedin,
   },
 ];
+//--------------------------------------------------

@@ -1,4 +1,4 @@
-/* General Layout for About Us Page */
+/* About Us Page */
 .about-us-page {
     padding: 20px;
     background-color: #f9f9f9;
@@ -85,8 +85,6 @@
 }
 
 /* Media Queries */
-
-/* Mobile devices (portrait) - Adjust for small screens */
 @media (max-width: 480px) {
     .about-us-page h2 {
         font-size: 1.8em; 
@@ -117,7 +115,6 @@
     }
 }
 
-/* Tablets and smaller laptops - Adjust layout for medium screens */
 @media (max-width: 768px) {
     .about-us-container {
         flex-direction: column;
@@ -145,8 +142,6 @@
         font-size: 1.6em;
     }
 }
-
-/* Larger tablets and small desktops - Adjust for larger medium screens */
 @media (max-width: 1024px) {
     .about-us-page h2 {
         font-size: 2.5em;
@@ -167,7 +162,6 @@
     }
 }
 
-/* Large screens (desktops) - For larger screens, keep layouts spacious */
 @media (min-width: 1025px) {
     .about-us-page {
         padding: 30px;

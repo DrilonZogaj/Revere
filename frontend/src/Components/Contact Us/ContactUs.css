@@ -1,3 +1,4 @@
+/* Contact Us page*/
 .contact-us-page {
   display: flex;
   flex-direction: column;
@@ -165,8 +166,6 @@
   font-size: 1.5rem;
   padding: 5px;
 }
-
-/* Close Button Styling */
 .Toastify__close-button {
   background: none;
   border: none;
@@ -187,7 +186,7 @@
   outline: none;
 }
 
-/* Responsiveness */
+/*  Media Queries */ 
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
