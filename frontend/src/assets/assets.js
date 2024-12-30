@@ -130,19 +130,7 @@ export const testimonials = {
   testimonial3,
 };
 
-
-
-
 // Social Icons
-// import facebook from './facebook.png';
-// import instagram from './instagram.png';
-// import twitter from './twitter.png';
-// import linkedin from './linkedin.png'
-
-// const socials =[{
-
-//   name: "facebook",
-
 import facebook from './facebook.png';
 import instagram from './instagram.png';
 import twitter from './twitter.png';
